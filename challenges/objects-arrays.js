@@ -24,7 +24,13 @@ const tyrannosaurus = new Dinosaur(
 );
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
-const stegosaurus = new Dinosaur("Stegosaurus", 2000, 9, "Late Jurassic");
+const stegosaurus = new Dinosaur(
+  "Stegosaurus",
+  "herbivorous",
+  2000,
+  9,
+  "Late Jurassic"
+);
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
 const velociraptor = new Dinosaur(
@@ -231,7 +237,7 @@ const displayNames = [];
 zooAnimals.forEach(el => {
   const animal = `Name: ${el.animal_name} Scientific: ${el.scientific_name}`;
   displayNames.push(animal);
-})
+});
 console.log(displayNames);
 
 /* Request 2: .map()
@@ -261,7 +267,7 @@ The zoos need to know their total animal population across the United States. Fi
 
 */
 const populationTotal = zooAnimals.reduce((acc, cur) => {
-  return (acc += cur.population)
+  return (acc += cur.population);
 }, 0);
 console.log(populationTotal);
 
